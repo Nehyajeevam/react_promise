@@ -22,13 +22,10 @@ let getEmployees=()=>{
                         </tr>`
         }
     document.getElementById('table_data').innerHTML=rows;
-    },2000)
+    },2000)
 }
-createEmployee({eid:103,ename:"Priya",esal:65000})
-.then((resp)=>{
-    console.log(resp)
-})
-.catch((err)=>{
-    console.log(err)
-})
-getEmployees()
+let execute=()=>{
+    createEmployee({"eid":103,ename:"Priyanka",esal:65000})
+    getEmployees();
+}
+execute()
